@@ -1,6 +1,6 @@
 # Agent Bazaar Hooks
 
-- **Repo:** TODO_GITHUB_URL/Synthesis-Slice
+- **Repo:** https://github.com/CrystallineButterfly/Synthesis-Slice
 - **Primary track:** Slice
 - **Overlap targets:** PayWithLocus, ENS, Lido stETH Treasury, Virtuals, ERC-8004 Receipts, Celo
 - **Primary contract:** SliceHookController
