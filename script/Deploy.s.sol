@@ -1,20 +1,18 @@
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 import {Script} from "forge-std/Script.sol";
-import {console2} from "forge-std/console2.sol";
+import {SliceHookController} from "src/SliceHookController.sol";
 
-import { SliceHookController } from "src/SliceHookController.sol";
-
-contract Deploy is Script {
+contract DeployScript is Script {
     function run() external returns (SliceHookController deployed) {
         address admin = vm.envAddress("ADMIN_WALLET_ADDRESS");
         address operator = vm.envAddress("OPERATOR_WALLET_ADDRESS");
-
+        address reporter = vm.envAddress("REPORTER_WALLET_ADDRESS");
+        uint256 principalFloor = vm.envUint("INITIAL_PRINCIPAL_FLOOR");
         vm.startBroadcast();
-        deployed = new SliceHookController(admin, operator);
+        deployed = new SliceHookController(admin, operator, reporter, principalFloor);
         vm.stopBroadcast();
-
-        console2.log("Deployed SliceHookController at", address(deployed));
     }
 }

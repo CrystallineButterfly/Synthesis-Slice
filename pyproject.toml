@@ -1,9 +1,13 @@
+
 [project]
 name = "synthesis_slice"
 version = "0.1.0"
 description = "An agent storefront that models dynamic pricing, checkout policy, and identity-aware access for ENS and Locus-powered commerce."
 readme = "README.md"
 requires-python = ">=3.13"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
 
 [tool.ruff]
 line-length = 100
