@@ -1,15 +1,25 @@
 # Agent Bazaar Hooks
 
-- **Repo:** `Synthesis-Slice`
+- **Repo:** [Synthesis-Slice](https://github.com/CrystallineButterfly/Synthesis-Slice)
 - **Primary track:** Slice
 - **Category:** commerce
+- **Primary contract:** `SliceHookController`
+- **Primary module:** `slice_bazaar`
 - **Submission status:** implementation ready, waiting for credentials and TxIDs.
+
+## What this repo does
 
 An agent storefront that models dynamic pricing, checkout policy, and identity-aware access for ENS and Locus-powered commerce.
 
-## Selected concept
+## Why this build matters
 
 An agent storefront models dynamic pricing, checkout policy, and identity-aware access. The contract stores pricing rule hashes and merchant policy state, while Python scripts assemble hook configurations and buyer flows.
+
+## Submission fit
+
+- **Primary track:** Slice
+- **Overlap targets:** PayWithLocus, ENS, Lido stETH Treasury, Virtuals, ERC-8004 Receipts, Celo
+- **Partners covered:** Slice, PayWithLocus, ENS, Lido, Virtuals, ERC-8004 Receipts, Celo
 
 ## Idea shortlist
 
@@ -17,11 +27,7 @@ An agent storefront models dynamic pricing, checkout policy, and identity-aware 
 2. Dynamic Agent Pricing Hooks
 3. ERC-8128 Web Auth Checkout
 
-## Partners covered
-
-Slice, PayWithLocus, ENS, Lido, Virtuals, ERC-8004 Receipts, Celo
-
-## Architecture
+## System graph
 
 ```mermaid
 flowchart TD
@@ -39,14 +45,36 @@ flowchart TD
     Contract --> erc_8004_receipts[ERC-8004 Receipts]
 ```
 
-## Repository layout
+## Repository contents
 
-- `src/`: shared policy contracts plus the repo-specific wrapper contract.
-- `script/`: Foundry deployment entrypoint.
-- `agents/`: Python runtime, partner adapters, and project metadata.
-- `scripts/`: CLI utilities for running the loop and rendering submissions.
-- `docs/`: architecture, credentials, demo script, and security notes.
-- `submissions/`: generated `synthesis.md` snippet for this repo.
+| Path | What it contains |
+| --- | --- |
+| `src/` | Shared policy contracts plus the repo-specific wrapper contract. |
+| `script/Deploy.s.sol` | Foundry deployment entrypoint for the policy contract. |
+| `agents/` | Python runtime, project spec, env handling, and partner adapters. |
+| `scripts/` | Terminal entrypoints for run, demo planning, and submission rendering. |
+| `docs/` | Architecture, credentials, security notes, and demo steps. |
+| `submissions/` | Generated `synthesis.md` snippet for this repo. |
+| `test/` | Foundry tests for the Solidity control layer. |
+| `tests/` | Python tests for runtime and project context. |
+| `agent.json` | Submission-facing agent manifest. |
+| `agent_log.json` | Local execution log and status trail. |
+
+## Autonomy loop
+
+1. Discover signals relevant to the repo track and its overlap targets.
+2. Build a bounded plan with per-action and compute caps.
+3. Persist a dry-run artifact before any live execution.
+4. Enforce onchain policy through the guarded contract wrapper.
+5. Verify outputs, update receipts, and render submission material.
+
+## Security controls
+
+- Admin-managed allowlists for targets and selectors.
+- Per-action caps, daily caps, cooldown windows, and a principal floor.
+- Reporter-only receipt anchoring and proof attachment.
+- Env-only secrets; no committed private keys or partner tokens.
+- Pause switch plus dry-run-first execution flow.
 
 ## Action catalog
 
@@ -59,6 +87,18 @@ flowchart TD
 | `virtuals_identity_sync` | Virtuals | Use Virtuals for a bounded action in this repo. | $5 | medium |
 | `erc_8004_receipts_receipt_anchor` | ERC-8004 Receipts | Use ERC-8004 Receipts for a bounded action in this repo. | $1 | medium |
 | `celo_payment_settle` | Celo | Use Celo for a bounded action in this repo. | $150 | low |
+
+## Local terminal flow (Anvil + Sepolia)
+
+```bash
+export SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_KEY
+anvil --fork-url "$SEPOLIA_RPC_URL" --chain-id 11155111
+cp .env.example .env
+# keep private keys only in .env; TODO.md stays local-only too
+forge script script/Deploy.s.sol --rpc-url "$RPC_URL" --broadcast
+python3 scripts/run_agent.py
+python3 scripts/render_submission.py
+```
 
 ## Commands
 
