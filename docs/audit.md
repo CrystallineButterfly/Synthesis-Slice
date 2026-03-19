@@ -43,6 +43,14 @@ when live network credentials are absent. Network-only partners still report mis
 `cast send` output is now parsed for `transactionHash` explicitly before falling back to the
 raw stdout payload.
 
+## Track-specific trust boundaries
+
+- primary wrapper contract: `SliceHookController`
+- live-only partners: Slice, PayWithLocus, Virtuals
+- offline-prepared partners: ENS (prepared_contract_call), Lido (prepared_contract_call), ERC-8004 Receipts (prepared_contract_call), Celo (prepared_contract_call)
+- highest-sensitivity actions: none
+- latest verification artifact: `artifacts/verification/0xc74765bbf4b587422f34c71cece659c301f5941db5c23e312ff20e8e76a14892.json`
+
 ## Current posture
 
 ### Good
