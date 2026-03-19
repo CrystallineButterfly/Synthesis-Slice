@@ -7,5 +7,563 @@
     "details": {
       "status": "ready_for_credentials"
     }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:21+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "catalog_state",
+          "description": "Inventory, hook configuration, and storefront settings.",
+          "score": 95
+        },
+        {
+          "name": "buyer_identity",
+          "description": "ENS, ERC-8004, or account-gating inputs.",
+          "score": 90
+        },
+        {
+          "name": "checkout_route",
+          "description": "Payment, discount, and settlement options.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Order confirmations and proof anchors.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:21+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan.",
+    "details": {
+      "plan_id": "0x9c522d6a06a6558f3dfffb18ea9d0ca6091c6dc888a1a638bcc4f26b6d8b57b3"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:21+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x79fc1ab46a79a53bf6a4ec4e6e15dfc0d9ab42d96ff082ee8e540379207ae216"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:21+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Skipped live execution.",
+    "details": {
+      "missing_env": [
+        "CELO_RPC_URL",
+        "ENS_NAME",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "RPC_URL",
+        "SLICE_API_KEY",
+        "SLICE_HOOK_URL",
+        "VIRTUALS_API_URL"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:21+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "Agent Bazaar Hooks",
+      "track": "Slice",
+      "plan_id": "0x9c522d6a06a6558f3dfffb18ea9d0ca6091c6dc888a1a638bcc4f26b6d8b57b3",
+      "simulation_hash": "0x79fc1ab46a79a53bf6a4ec4e6e15dfc0d9ab42d96ff082ee8e540379207ae216",
+      "execution_status": "awaiting_credentials",
+      "tx_ids": [],
+      "created_at": "2026-03-19T03:30:21+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:21+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "catalog_state",
+          "description": "Inventory, hook configuration, and storefront settings.",
+          "score": 95
+        },
+        {
+          "name": "buyer_identity",
+          "description": "ENS, ERC-8004, or account-gating inputs.",
+          "score": 90
+        },
+        {
+          "name": "checkout_route",
+          "description": "Payment, discount, and settlement options.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Order confirmations and proof anchors.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:21+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan.",
+    "details": {
+      "plan_id": "0x9c522d6a06a6558f3dfffb18ea9d0ca6091c6dc888a1a638bcc4f26b6d8b57b3"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:21+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x79fc1ab46a79a53bf6a4ec4e6e15dfc0d9ab42d96ff082ee8e540379207ae216"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:21+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Skipped live execution.",
+    "details": {
+      "missing_env": [
+        "CELO_RPC_URL",
+        "ENS_NAME",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "RPC_URL",
+        "SLICE_API_KEY",
+        "SLICE_HOOK_URL",
+        "VIRTUALS_API_URL"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:21+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "Agent Bazaar Hooks",
+      "track": "Slice",
+      "plan_id": "0x9c522d6a06a6558f3dfffb18ea9d0ca6091c6dc888a1a638bcc4f26b6d8b57b3",
+      "simulation_hash": "0x79fc1ab46a79a53bf6a4ec4e6e15dfc0d9ab42d96ff082ee8e540379207ae216",
+      "execution_status": "awaiting_credentials",
+      "tx_ids": [],
+      "created_at": "2026-03-19T03:30:21+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:39:23.678178+00:00",
+    "stage": "security_review",
+    "actor": "audit_pass",
+    "message": "Completed the shared hardening and offline-artifact audit pass.",
+    "details": {
+      "status": "audited_ready_pending_live_credentials",
+      "primary_contract": "SliceHookController.sol"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:49:06+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "catalog_state",
+          "description": "Inventory, hook configuration, and storefront settings.",
+          "score": 95
+        },
+        {
+          "name": "buyer_identity",
+          "description": "ENS, ERC-8004, or account-gating inputs.",
+          "score": 90
+        },
+        {
+          "name": "checkout_route",
+          "description": "Payment, discount, and settlement options.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Order confirmations and proof anchors.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:49:06+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan for every repo action.",
+    "details": {
+      "plan_id": "0xdc4a27cf9557e58a5b708c319a342b3fc75a7dd5222d3b5b14eb1cbe6828023a",
+      "action_count": 7
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:49:06+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x3c567c93c60e92e6ceed46f1b0f960f352214fefb8e44cd41903c4cd1bda4dd1"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:49:06+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Prepared offline artifacts and skipped network execution.",
+    "details": {
+      "missing_env": [
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "SLICE_API_KEY",
+        "SLICE_HOOK_URL",
+        "VIRTUALS_API_URL"
+      ],
+      "artifact_count": 4
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:49:06+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "Agent Bazaar Hooks",
+      "track": "Slice",
+      "plan_id": "0xdc4a27cf9557e58a5b708c319a342b3fc75a7dd5222d3b5b14eb1cbe6828023a",
+      "simulation_hash": "0x3c567c93c60e92e6ceed46f1b0f960f352214fefb8e44cd41903c4cd1bda4dd1",
+      "execution_status": "offline_prepared",
+      "tx_ids": [],
+      "artifact_paths": [
+        "artifacts/onchain_intents/ens_ens_publish.json",
+        "artifacts/onchain_intents/lido_yield_route.json",
+        "artifacts/onchain_intents/erc_8004_receipts_receipt_anchor.json",
+        "artifacts/onchain_intents/celo_payment_settle.json"
+      ],
+      "partner_statuses": {
+        "Slice": "awaiting_credentials",
+        "PayWithLocus": "awaiting_credentials",
+        "ENS": "prepared_contract_call",
+        "Lido": "prepared_contract_call",
+        "Virtuals": "awaiting_credentials",
+        "ERC-8004 Receipts": "prepared_contract_call",
+        "Celo": "prepared_contract_call"
+      },
+      "created_at": "2026-03-19T03:49:06+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:49+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "catalog_state",
+          "description": "Inventory, hook configuration, and storefront settings.",
+          "score": 95
+        },
+        {
+          "name": "buyer_identity",
+          "description": "ENS, ERC-8004, or account-gating inputs.",
+          "score": 90
+        },
+        {
+          "name": "checkout_route",
+          "description": "Payment, discount, and settlement options.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Order confirmations and proof anchors.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:49+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan for every repo action.",
+    "details": {
+      "plan_id": "0x74eb24a0663f8b5298b9805d14b883abbd8da7338e91dff82a49305dbaa36a49",
+      "action_count": 7
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:49+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0xcff63c897de37646f124e12a536be4f697a03b930e2ff3ac06719959cfc8b698"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:49+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Prepared offline artifacts and skipped network execution.",
+    "details": {
+      "missing_env": [
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "SLICE_API_KEY",
+        "SLICE_HOOK_URL",
+        "VIRTUALS_API_URL"
+      ],
+      "artifact_count": 4
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:49+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "Agent Bazaar Hooks",
+      "track": "Slice",
+      "plan_id": "0x74eb24a0663f8b5298b9805d14b883abbd8da7338e91dff82a49305dbaa36a49",
+      "simulation_hash": "0xcff63c897de37646f124e12a536be4f697a03b930e2ff3ac06719959cfc8b698",
+      "execution_status": "offline_prepared",
+      "tx_ids": [],
+      "artifact_paths": [
+        "artifacts/onchain_intents/ens_ens_publish.json",
+        "artifacts/onchain_intents/lido_yield_route.json",
+        "artifacts/onchain_intents/erc_8004_receipts_receipt_anchor.json",
+        "artifacts/onchain_intents/celo_payment_settle.json"
+      ],
+      "partner_statuses": {
+        "Slice": "awaiting_credentials",
+        "PayWithLocus": "awaiting_credentials",
+        "ENS": "prepared_contract_call",
+        "Lido": "prepared_contract_call",
+        "Virtuals": "awaiting_credentials",
+        "ERC-8004 Receipts": "prepared_contract_call",
+        "Celo": "prepared_contract_call"
+      },
+      "created_at": "2026-03-19T03:50:49+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:48+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "catalog_state",
+          "description": "Inventory, hook configuration, and storefront settings.",
+          "score": 95
+        },
+        {
+          "name": "buyer_identity",
+          "description": "ENS, ERC-8004, or account-gating inputs.",
+          "score": 90
+        },
+        {
+          "name": "checkout_route",
+          "description": "Payment, discount, and settlement options.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Order confirmations and proof anchors.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:48+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan for every repo action.",
+    "details": {
+      "plan_id": "0x177936ed038c716a84de4cce5e09b7c17d50893e2eb5631634dabaf6a5c60b13",
+      "action_count": 7
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:48+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x708503974bcccb87aae4eea67537fb4336412caa9ccc74ea19365a78f27dc2a0"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:48+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Prepared offline artifacts and skipped network execution.",
+    "details": {
+      "missing_env": [
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "SLICE_API_KEY",
+        "SLICE_HOOK_URL",
+        "VIRTUALS_API_URL"
+      ],
+      "artifact_count": 4
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:48+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "Agent Bazaar Hooks",
+      "track": "Slice",
+      "plan_id": "0x177936ed038c716a84de4cce5e09b7c17d50893e2eb5631634dabaf6a5c60b13",
+      "simulation_hash": "0x708503974bcccb87aae4eea67537fb4336412caa9ccc74ea19365a78f27dc2a0",
+      "execution_status": "offline_prepared",
+      "tx_ids": [],
+      "artifact_paths": [
+        "artifacts/onchain_intents/ens_ens_publish.json",
+        "artifacts/onchain_intents/lido_yield_route.json",
+        "artifacts/onchain_intents/erc_8004_receipts_receipt_anchor.json",
+        "artifacts/onchain_intents/celo_payment_settle.json"
+      ],
+      "partner_statuses": {
+        "Slice": "awaiting_credentials",
+        "PayWithLocus": "awaiting_credentials",
+        "ENS": "prepared_contract_call",
+        "Lido": "prepared_contract_call",
+        "Virtuals": "awaiting_credentials",
+        "ERC-8004 Receipts": "prepared_contract_call",
+        "Celo": "prepared_contract_call"
+      },
+      "created_at": "2026-03-19T03:51:48+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:19+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "catalog_state",
+          "description": "Inventory, hook configuration, and storefront settings.",
+          "score": 95
+        },
+        {
+          "name": "buyer_identity",
+          "description": "ENS, ERC-8004, or account-gating inputs.",
+          "score": 90
+        },
+        {
+          "name": "checkout_route",
+          "description": "Payment, discount, and settlement options.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Order confirmations and proof anchors.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:19+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan for every repo action.",
+    "details": {
+      "plan_id": "0xc74765bbf4b587422f34c71cece659c301f5941db5c23e312ff20e8e76a14892",
+      "action_count": 7
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:19+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0xfc70bc147f43b61a5be979f34da4dc86ad29f7c9ecff6508d609f47cf10f10ae"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:19+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Prepared offline artifacts and skipped network execution.",
+    "details": {
+      "missing_env": [
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "SLICE_API_KEY",
+        "SLICE_HOOK_URL",
+        "VIRTUALS_API_URL"
+      ],
+      "artifact_count": 4
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:19+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "Agent Bazaar Hooks",
+      "track": "Slice",
+      "plan_id": "0xc74765bbf4b587422f34c71cece659c301f5941db5c23e312ff20e8e76a14892",
+      "simulation_hash": "0xfc70bc147f43b61a5be979f34da4dc86ad29f7c9ecff6508d609f47cf10f10ae",
+      "execution_status": "offline_prepared",
+      "tx_ids": [],
+      "artifact_paths": [
+        "artifacts/onchain_intents/ens_ens_publish.json",
+        "artifacts/onchain_intents/lido_yield_route.json",
+        "artifacts/onchain_intents/erc_8004_receipts_receipt_anchor.json",
+        "artifacts/onchain_intents/celo_payment_settle.json"
+      ],
+      "partner_statuses": {
+        "Slice": "awaiting_credentials",
+        "PayWithLocus": "awaiting_credentials",
+        "ENS": "prepared_contract_call",
+        "Lido": "prepared_contract_call",
+        "Virtuals": "awaiting_credentials",
+        "ERC-8004 Receipts": "prepared_contract_call",
+        "Celo": "prepared_contract_call"
+      },
+      "created_at": "2026-03-19T03:52:19+00:00"
+    }
   }
 ]
